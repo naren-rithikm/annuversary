@@ -275,7 +275,7 @@ function createLyricsAnimation() {
                 if (activeLine && activeLine.parentNode) {
                     activeLine.remove();
                 }
-            }, 1000);
+            }, 2000);  // Increased from 1000 to 2000 to match the 2s CSS transition
         }
 
         // Reset index if we've shown all lyrics
@@ -292,11 +292,9 @@ function createLyricsAnimation() {
         container.appendChild(line);
 
         // Trigger entrance animation after a short delay
-        requestAnimationFrame(() => {
-            requestAnimationFrame(() => {
-                line.classList.add('visible');
-            });
-        });
+        setTimeout(() => {
+            line.classList.add('visible');
+        }, 100);
 
         activeLine = line;
         currentLineIndex++;
@@ -305,8 +303,8 @@ function createLyricsAnimation() {
     // Start the animation with initial delay
     setTimeout(() => {
         showNextLine();
-        // Show next line every 6 seconds instead of 4
-        setInterval(showNextLine, 6000);
+        // Show next line every 8 seconds (6 seconds display + 2 seconds transition)
+        setInterval(showNextLine, 8000);
     }, 1000);
 }
 
