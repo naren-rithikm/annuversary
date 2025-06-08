@@ -2,22 +2,22 @@
 const messages = [
     {
         text: "From the moment I first saw you, I knew you were special...",
-        image: "https://source.unsplash.com/400x300/?romantic,sunset"
+        image: "images/first-meeting.jpg"  // Your first personal image
     },
     {
         text: "Your smile lights up my darkest days...",
-        image: "https://source.unsplash.com/400x300/?smile,happy"
+        image: "images/smile.jpg"  // Your second personal image
     },
     {
         text: "Every little thing about you makes my heart skip a beat...",
     },
     {
         text: "The way you understand me without words...",
-        image: "https://source.unsplash.com/400x300/?couple,love"
+        image: "images/together.jpg"  // Your third personal image
     },
     {
         text: "Our first date feels like yesterday, yet here we are, one beautiful year later...",
-        image: "https://source.unsplash.com/400x300/?date,restaurant"
+        image: "images/first-date.jpg"  // Your fourth personal image
     },
     {
         text: "The sound of your laughter is my favorite melody...",
@@ -33,9 +33,9 @@ const messages = [
 
 // Card positions and rotations
 const cardPositions = messages.map((_, index) => ({
-    left: 40 + (index * 5) + '%',
-    top: 30 + (index * 2) + '%',
-    rotation: -5 + (Math.random() * 10)
+    left: 38 + (index * 2) + '%',  // Adjusted for smaller card width
+    top: 28 + (index * 1.5) + '%',  // Adjusted for better vertical spacing
+    rotation: -3 + (Math.random() * 6)  // Reduced rotation range for neater appearance
 }));
 
 let draggedCard = null;

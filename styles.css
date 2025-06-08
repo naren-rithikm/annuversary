@@ -35,23 +35,24 @@ body {
 
 .card {
     position: absolute;
-    width: 300px;
-    min-height: 200px;
+    width: 320px;
+    min-height: 360px;
     background: linear-gradient(to bottom, #fff9f9, #fff);
     border-radius: 15px;
-    padding: 25px;
+    padding: 18px;
     cursor: move;
     user-select: none;
     box-shadow: 0 4px 15px var(--shadow-color),
                 0 0 30px rgba(231, 76, 60, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     font-family: 'Covered By Your Grace', cursive;
-    font-size: 1.5rem;
-    line-height: 1.6;
+    font-size: 1.4rem;
+    line-height: 1.5;
     color: var(--text-color);
     transform-origin: center center;
     border: 1px solid rgba(231, 76, 60, 0.1);
     backdrop-filter: blur(5px);
+    overflow: hidden;
 }
 
 .card::before {
@@ -67,14 +68,14 @@ body {
 }
 
 .card:hover {
-    transform: translateY(-8px) rotate(1deg);
+    transform: translateY(-5px) rotate(1deg);
     box-shadow: 0 8px 25px var(--shadow-color),
                 0 0 40px rgba(231, 76, 60, 0.2);
 }
 
 .card.dragging {
     opacity: 0.95;
-    transform: scale(1.08) rotate(3deg);
+    transform: scale(1.05) rotate(2deg);
     box-shadow: 0 12px 30px var(--shadow-color),
                 0 0 50px rgba(231, 76, 60, 0.3);
     z-index: 1000;
@@ -168,13 +169,36 @@ body {
 
 /* Adding image support to cards */
 .card-image {
-    width: calc(100% + 50px);
-    height: 180px;
-    object-fit: cover;
+    width: calc(100% + 36px);
+    height: 240px;
+    object-fit: contain;
+    background-color: #fff9f9;
     border-radius: 12px;
-    margin: -25px -25px 15px -25px;
+    margin: -18px -18px 12px -18px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    border: 5px solid #fff;
+    border: 2px solid #fff;
+    transition: transform 0.3s ease;
+    display: block;
+    position: relative;
+}
+
+/* Enhance image hover effect */
+.card:hover .card-image {
+    transform: scale(1.02);
+}
+
+/* Adjust card text spacing */
+.card p {
+    margin-top: 15px;
+    padding: 0 12px;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+/* Remove the gradient overlay since we're using contain */
+.card::after {
+    display: none;
 }
 
 /* Floating background animations */
