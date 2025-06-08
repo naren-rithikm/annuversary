@@ -248,10 +248,73 @@ function showFinalMessage() {
     }, 100);
 }
 
+// Lyrics animation
+function createLyricsAnimation() {
+    const container = document.getElementById('lyricsContainer');
+    const lyrics = [
+        "Pretty little baby",
+        "You say that maybe",
+        "You'll be thinkin' of me",
+        "And try to love me",
+        "I'm hoping that you do",
+        "You can ask the flowers",
+        "I sit for hours",
+        "Tellin' all the bluebirds",
+        "The bill and coo birds",
+        "I'm so in love with you"
+    ];
+
+    let currentLineIndex = 0;
+    let activeLine = null;
+
+    function showNextLine() {
+        // Remove previous line with animation
+        if (activeLine) {
+            activeLine.classList.add('fade-out');
+            setTimeout(() => {
+                if (activeLine && activeLine.parentNode) {
+                    activeLine.remove();
+                }
+            }, 1000);
+        }
+
+        // Reset index if we've shown all lyrics
+        if (currentLineIndex >= lyrics.length) {
+            currentLineIndex = 0;
+        }
+
+        // Create and position new line
+        const line = document.createElement('div');
+        line.className = 'lyric-line';
+        line.textContent = lyrics[currentLineIndex];
+        
+        // Add line to container
+        container.appendChild(line);
+
+        // Trigger entrance animation after a short delay
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                line.classList.add('visible');
+            });
+        });
+
+        activeLine = line;
+        currentLineIndex++;
+    }
+
+    // Start the animation with initial delay
+    setTimeout(() => {
+        showNextLine();
+        // Show next line every 6 seconds instead of 4
+        setInterval(showNextLine, 6000);
+    }, 1000);
+}
+
 // Initialize when the page loads
 document.addEventListener('DOMContentLoaded', () => {
     createCards();
     createFloatingHearts();
     createButterflies();
     createRosePetals();
+    createLyricsAnimation();
 }); 
