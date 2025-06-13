@@ -9,7 +9,7 @@ const messages = [
         image: "images/smile.jpg"  // Your second personal image
     },
     {
-        text: "To my dear love💌,\n\nhappieeeee firsttt anniversaryyy darlinggggg💟😚🫂\n\nJuly 8th 4:53 -💗💗🧿\nNov 1 - 1st babe\nNov 20- first kiss\nDec 2 - first thangoo\nDec 19 first Date\nDec 26-the moment u layed on my shoulder 💗\nFeb 15- first proper date 🌹\nMarch 6- first time konjunaa neram😭💗",
+        text: "To my dear love💌,\n\nhappieeeee firsttt anniversaryyy darlinggggg💟😚🫂\n\nJuly 8th 4:53 -💗💗🧿\nNov 1 - 1st babe\nNov 20- first kiss\nDec 2 - first thangoo\nDec 19 first Date\nDec 26-the moment u layed on my shoulder 💗\nFeb 15- first proper date 🌹\nMarch 6- first time konjunaa neram💗",
     },
     {
         text: "The way you understand me without words...",
@@ -26,21 +26,27 @@ const messages = [
         text: "unkudaaaaa irukuraaa oru oruuu nimishamum rombaaa speciall ,na yennaye marandhu vera oru chinna paiyan ah irukenn😭💗.  inno kudaa edhulaaa oru kanavu marii than irukuuuu😭😭♥️♥️. love laaaa suthamaa poga vendam nu irundhaa oru paiyan na 10th apoo until i saw myself lost in ur cuteness ur smile ur babyness. School ke poga pudikadhaaa naaa hehe una pakka daily um school ku var start panna, kutty kutty peeps, neee coridor ku varum podhuuu , prayer la nikum podhuuu unaaa pakura andha few secondsss laaa than yen whole day precious moment irukuuuu. gorund la ellarum nikum podhuuu appdiyeee unaa pakka try pannum podhuu nee therira andha sec irukeeeee♥️♥️♥️♥️.",
     },
     {
-        text: "yenakuuu unaaa rombbaaa pudikummm di un kudaaa serndhu yen valka muluka valaaanuuuu ( not mee tearing upp nowwww writingggg the letterrrr😭🥺) i am sooo damn in loveee with youuuu💗 . i want to havee kidss with uu😭💗 , do this life with youuuu onlyyy youuu yennalaa ne elladha valkai ah nenachu kuda paka mudiyalaaa.  Naraiyaaa travell pannanuuuu unkudaaaa. appdiyeeeee yedhuvum pesamaaaaa nee thoongum podhuuu yenn thangathaaa pathuuu rasikanuuuu , unnodaaaaa saree ah kata help pannanuuuu ,unakuuu uti vidanuuu , yennodaaaa kolandhaa mari pathukanuuuuu. solliteee polaaam heheee💝.Innoooo kudaaa when i see u my heart beat risessss and there are butterflies🦋 in my stomachhh.  i reallyyy hate this distance between ussss, pakathulayee than irukom ana oru marii distant ah ve irukuraa mariye irukuu😭😭, missing u is the hardest thing i have to go thru dailyy. u were the only person to stay by my sidee during my bad times and good times , kept supporting mee and believeing in me no matter whatt andd unnakuu edhu evlooo theriyu nu yenaku therila anaaa neee yenaku kudutha support and yen side la irundha nala than na epo eppdi endha naren ah iruken🥹🎀",
+        text: "yenakuuu unaaa rombbaaa pudikummm di un kudaaa serndhu yen valka muluka valaaanuuuu ( not mee tearing upp nowwww writingggg the letterrrr😭🥺) i am sooo damn in loveee with youuuu💗 . i want to havee kidss with uu😭💗 , do this life with youuuu onlyyy youuu yennalaa ne elladha valkai ah nenachu kuda paka mudiyalaaa.  Naraiyaaa travell pannanuuuu unkudaaaa. appdiyeeeee yedhuvum pesamaaaaa nee thoongum podhuuu yenn thangathaaa pathuuu rasikanuuuu , unnodaaaaa saree ah kata help pannanuuuu ,unakuuu uti vidanuuu , yennodaaaa kolandhaa mari pathukanuuuuu. solliteee polaaam heheee💝.",
     },
     {
-        text: "unnodaaaaa cutennesss ye  ne yenna kolandhaa mari pathukuradhuuu, unnodaaa kalandhatanamm unnodaaa smileee, i feel harder day by dayy😭💗. yenakuu amma aprm yennaa pathukutaaa ore ponu neeee🥺♥️. edhuuu varaiikuuu naa unaa nalla pathukutenn nu namburaaaa , unnodaaa ellaaa expectaions ah fullfill panna na nu therilaaaa anaaa unaaa nalla pathupennn😭💗💗. Unaa eppovumee happyyy ah vechukanuuu unnodaa azhaganaaa smileeee dull ye aga kudadhuuuuu. naaa una yengachuuu hurtt pannirundhaaaa sorrryyyyyyyy . andddd i canttt just write the lettr without saying howwwwww beautiful my darlinggggg iss😚😚-una mari oru azhaga naaaa ponnaaa na pathadheee ellaaaa di devadha mariii irukaaaaa di👉🏻👈🏻😚 chellooooo ,unnoodaaa sirupu irukeeee adhu podhu yenna mayakaaaa, unnodaaaa kangal ah pathuteee irukalaaaammm😭💗",
+        text: "Innoooo kudaaa when i see u my heart beat risessss and there are butterflies🦋 in my stomachhh.  i reallyyy hate this distance between ussss, pakathulayee than irukom ana oru marii distant ah ve irukuraa mariye irukuu😭😭, missing u is the hardest thing i have to go thru dailyy. u were the only person to stay by my sidee during my bad times and good times , kept supporting mee and believeing in me no matter whatt andd unnakuu edhu evlooo theriyu nu yenaku therila anaaa neee yenaku kudutha support and yen side la irundha nala than na epo eppdi endha naren ah iruken🥹🎀",
     },
     {
-        text: "i loveeee youuu soo muchhhhh💗,u are stuck with mee forveerrrrrr heheeee, naa kurumbuu pannuveenn , lusuuu mari pannuvennn,hehee konjiteeee irukpeeeeennn mutham thandhuteeee irupeeennn😚💗, i am careless tooooo neee than unnodaaa baby boi ah pathukanuuuuuuu . yennaa vandhalummm una vitutu na poga matenn i promise. i loveeeeeee youuu sooo soo muchhhhh mwahhhhh🧿♥️",
+        text: "unnodaaaaa cutennesss ye  ne yenna kolandhaa mari pathukuradhuuu, unnodaaa kalandhatanamm unnodaaa smileee, i feel harder day by dayy😭💗. yenakuu amma aprm yennaa pathukutaaa ore ponu neeee🥺♥️. edhuuu varaiikuuu naa unaa nalla pathukutenn nu namburaaaa , unnodaaa ellaaa expectaions ah fullfill panna na nu therilaaaa anaaa unaaa nalla pathupennn😭💗💗.",
+    },
+    {
+        text: "Unaa eppovumee happyyy ah vechukanuuu unnodaa azhaganaaa smileeee dull ye aga kudadhuuuuu. naaa una yengachuuu hurtt pannirundhaaaa sorrryyyyyyyy . Andddd i canttt just write the lettr without saying howwwwww beautiful my darlinggggg iss😚😚-una mari oru azhaga naaaa ponnaaa na pathadheee ellaaaa di devadha mariii irukaaaaa di👉🏻👈🏻😚 chellooooo ,unnoodaaa sirupu irukeeee adhu podhu yenna mayakaaaa, unnodaaaa kangal ah pathuteee irukalaaaammm😭💗",
+    },
+    {
+        text: "i loveeee youuu soo muchhhhh💗,u are stuck with mee forveerrrrrr heheeee, naa kurumbuu pannuveenn , lusuuu mari pannuvennn,hehee konjiteeee irukpeeeeennn mutham thandhuteeee irupeeennn😚💗, i am careless tooooo neee than yenna unnodaaa baby boi ah pathukanuuuuuuu . yennaa vandhakummm una vituu na poga matenn i promise. i loveeeeeee youuu sooo soo muchhhhh mwahhhhh🧿♥️",
     }
 ];
 
 // Card positions and rotations
 const cardPositions = messages.map((_, index) => ({
-    left: 38 + (index * 2) + '%',  // Adjusted for smaller card width
-    top: 28 + (index * 1.5) + '%',  // Adjusted for better vertical spacing
-    rotation: -3 + (Math.random() * 6)  // Reduced rotation range for neater appearance
+    left: 38 + (index * 2) + '%',
+    top: 28 + (index * 15) + '%',
+    rotation: -3 + (Math.random() * 6)
 }));
 
 let draggedCard = null;
@@ -49,6 +55,7 @@ let initialY = 0;
 let currentX = 0;
 let currentY = 0;
 let revealedCards = 0;
+let isDragging = false;
 
 // Create butterflies animation
 function createButterflies() {
@@ -160,6 +167,13 @@ function createCards() {
         card.style.transform = `rotate(${cardPositions[index].rotation}deg)`;
         card.style.zIndex = messages.length - index;
         
+        // Add click event for fading
+        card.addEventListener('click', (e) => {
+            if (!isDragging) {
+                fadeCard(card);
+            }
+        });
+        
         // Add drag events
         card.addEventListener('mousedown', startDragging);
         card.addEventListener('touchstart', startDragging);
@@ -168,13 +182,56 @@ function createCards() {
     });
 }
 
+function fadeCard(card) {
+    if (card.classList.contains('fading')) return;
+    
+    card.classList.add('fading');
+    card.style.opacity = '0';
+    card.style.transform = 'scale(0.8) rotate(10deg)';
+    card.style.transition = 'all 0.5s ease';
+    
+    // Create burst of sparkles
+    const rect = card.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+    
+    for (let i = 0; i < 15; i++) {
+        setTimeout(() => {
+            createSparkle(
+                centerX + Math.random() * 150 - 75,
+                centerY + Math.random() * 150 - 75
+            );
+        }, i * 50);
+    }
+    
+    // Remove card after animation
+    setTimeout(() => {
+        if (card && card.parentNode) {
+            card.remove();
+            revealedCards++;
+            
+            // Check if all cards are gone
+            if (revealedCards === messages.length) {
+                showFinalMessage();
+            }
+        }
+    }, 500);
+}
+
 function startDragging(e) {
+    if (isDragging) return;
+    
     draggedCard = e.target.closest('.card');
+    if (!draggedCard) return;
+    
+    isDragging = true;
     draggedCard.classList.add('dragging');
     
     const event = e.type === 'mousedown' ? e : e.touches[0];
-    initialX = event.clientX - draggedCard.offsetLeft;
-    initialY = event.clientY - draggedCard.offsetTop;
+    const rect = draggedCard.getBoundingClientRect();
+    
+    initialX = event.clientX - rect.left;
+    initialY = event.clientY - rect.top;
     
     document.addEventListener('mousemove', drag);
     document.addEventListener('touchmove', drag);
@@ -183,26 +240,45 @@ function startDragging(e) {
 }
 
 function drag(e) {
-    if (!draggedCard) return;
+    if (!draggedCard || !isDragging) return;
     
     e.preventDefault();
     const event = e.type === 'mousemove' ? e : e.touches[0];
     
-    currentX = event.clientX - initialX;
-    currentY = event.clientY - initialY;
+    const scrollX = window.pageXOffset || document.documentElement.scrollLeft;
+    const scrollY = window.pageYOffset || document.documentElement.scrollTop;
     
-    draggedCard.style.left = currentX + 'px';
-    draggedCard.style.top = currentY + 'px';
+    currentX = event.clientX - initialX + scrollX;
+    currentY = event.clientY - initialY + scrollY;
     
-    // Create more frequent sparkles while dragging
-    if (Math.random() > 0.5) {
-        createSparkle(event.clientX, event.clientY);
+    draggedCard.style.transform = `translate(${currentX}px, ${currentY}px) rotate(${draggedCard.dataset.rotation || 0}deg)`;
+    
+    // Create more frequent hearts while dragging
+    if (Math.random() > 0.3) { // Increased frequency
+        createHeartAtPosition(event.clientX, event.clientY);
     }
 }
 
+// Create heart at specific position
+function createHeartAtPosition(x, y) {
+    const heart = document.createElement('div');
+    heart.className = 'floating-heart';
+    heart.style.setProperty('--float-left', x + 'px');
+    heart.style.setProperty('--float-delay', '0s');
+    heart.style.setProperty('--float-time', (Math.random() * 5 + 3) + 's'); // Faster animation
+    heart.style.setProperty('--float-scale', Math.random() * 1.5 + 0.5);
+    heart.style.left = x + 'px';
+    heart.style.top = y + 'px';
+    heart.style.position = 'fixed';
+    heart.style.zIndex = '1000';
+    document.body.appendChild(heart);
+    heart.addEventListener('animationend', () => heart.remove());
+}
+
 function stopDragging() {
-    if (!draggedCard) return;
+    if (!draggedCard || !isDragging) return;
     
+    isDragging = false;
     draggedCard.classList.remove('dragging');
     
     const distance = Math.sqrt(
@@ -211,36 +287,11 @@ function stopDragging() {
     );
     
     if (distance > 200) {
-        // Ensure the card fades away properly
-        draggedCard.style.opacity = '0';
-        draggedCard.style.transform = 'scale(0.8) rotate(10deg)';
-        draggedCard.style.transition = 'all 0.5s ease';
-        
-        // Remove the card after animation completes
-        setTimeout(() => {
-            if (draggedCard && draggedCard.parentNode) {
-                draggedCard.remove();
-            }
-            revealedCards++;
-            
-            // Create burst of sparkles for card removal
-            for (let i = 0; i < 15; i++) {
-                setTimeout(() => {
-                    createSparkle(
-                        currentX + Math.random() * 150 - 75,
-                        currentY + Math.random() * 150 - 75
-                    );
-                }, i * 50);
-            }
-            
-            if (revealedCards === messages.length) {
-                showFinalMessage();
-            }
-        }, 500);
+        fadeCard(draggedCard);
     } else {
         // Reset card position if not dragged far enough
-        draggedCard.style.left = draggedCard.style.left;
-        draggedCard.style.top = draggedCard.style.top;
+        const originalPosition = cardPositions[messages.length - revealedCards - 1];
+        draggedCard.style.transform = `translate(${originalPosition.left}, ${originalPosition.top}) rotate(${originalPosition.rotation}deg)`;
     }
     
     draggedCard = null;
@@ -288,7 +339,7 @@ function createLyricsAnimation() {
                 if (activeLine && activeLine.parentNode) {
                     activeLine.remove();
                 }
-            }, 2000);  // Increased from 1000 to 2000 to match the 2s CSS transition
+            }, 1000);  // Reduced from 2000 to 1000 for faster transition
         }
 
         // Reset index if we've shown all lyrics
@@ -307,7 +358,7 @@ function createLyricsAnimation() {
         // Trigger entrance animation after a short delay
         setTimeout(() => {
             line.classList.add('visible');
-        }, 100);
+        }, 50);  // Reduced from 100 to 50 for faster appearance
 
         activeLine = line;
         currentLineIndex++;
@@ -316,9 +367,9 @@ function createLyricsAnimation() {
     // Start the animation with initial delay
     setTimeout(() => {
         showNextLine();
-        // Show next line every 8 seconds (6 seconds display + 2 seconds transition)
-        setInterval(showNextLine, 8000);
-    }, 1000);
+        // Show next line every 4 seconds (3 seconds display + 1 second transition)
+        setInterval(showNextLine, 4000);  // Reduced from 8000 to 4000 for faster cycling
+    }, 500);  // Reduced from 1000 to 500 for faster start
 }
 
 // Initialize when the page loads

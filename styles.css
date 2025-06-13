@@ -11,13 +11,19 @@
     box-sizing: border-box;
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
 body {
     font-family: 'Dancing Script', cursive;
     background-color: var(--primary-color);
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     background-image: url('data:image/svg+xml,%3Csvg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z" fill="%23f4d3d3" fill-opacity="0.4" fill-rule="evenodd"/%3E%3C/svg%3E');
 }
 
@@ -26,29 +32,28 @@ body {
     max-width: 1200px;
     padding: 20px;
     position: relative;
+    min-height: 100vh;
 }
 
 .cards-container {
     position: relative;
-    min-height: 80vh;
+    min-height: 100vh;
+    width: 100%;
+    padding: 20px;
 }
 
 .card {
     position: absolute;
     width: 320px;
-    min-height: 400px;
-    max-height: 500px;
     background: linear-gradient(to bottom, #fff9f9, #fff);
     border-radius: 15px;
     padding: 25px;
-    cursor: move;
+    cursor: pointer;
     user-select: none;
     box-shadow: 0 4px 15px var(--shadow-color),
                 0 0 30px rgba(231, 76, 60, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.5s ease;
     font-family: 'Covered By Your Grace', cursive;
-    font-size: 1.1rem;
-    line-height: 1.8;
     color: var(--text-color);
     transform-origin: center center;
     border: 1px solid rgba(231, 76, 60, 0.1);
@@ -56,6 +61,7 @@ body {
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    z-index: 1;
 }
 
 .card::before {
@@ -82,6 +88,12 @@ body {
     box-shadow: 0 12px 30px var(--shadow-color),
                 0 0 50px rgba(231, 76, 60, 0.3);
     z-index: 1000;
+    cursor: grabbing;
+}
+
+.card.fading {
+    pointer-events: none;
+    cursor: default;
 }
 
 .final-message {
@@ -173,7 +185,12 @@ body {
     }
 }
 
-/* Adding image support to cards */
+/* Image card specific styles */
+.card:has(.card-image) {
+    min-height: 400px;
+    max-height: 500px;
+}
+
 .card-image {
     width: calc(100% + 50px);
     height: 240px;
@@ -188,28 +205,35 @@ body {
     position: relative;
 }
 
-/* Enhance image hover effect */
-.card:hover .card-image {
-    transform: scale(1.02);
+/* Text-only card specific styles */
+.card:not(:has(.card-image)) {
+    height: auto;
+    min-height: auto;
+    max-height: none;
+    overflow: visible;
 }
 
-/* Adjust card text spacing */
-.card p {
+.card:not(:has(.card-image)) p {
+    font-size: 1rem;
+    line-height: 1.6;
+    word-break: break-word;
+    white-space: normal;
     margin: 0;
     padding: 0;
     position: relative;
     z-index: 1;
     text-align: left;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    overflow-y: auto;
-    flex: 1;
 }
 
-/* Adjust card height for text-only cards */
-.card:not(:has(.card-image)) {
-    min-height: 400px;
-    max-height: 500px;
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .card {
+        width: 280px;
+    }
+    
+    .card:not(:has(.card-image)) p {
+        font-size: 0.95rem;
+    }
 }
 
 /* Remove the gradient overlay since we're using contain */
@@ -230,20 +254,23 @@ body {
 }
 
 .floating-heart {
-    position: absolute;
+    position: fixed;
     width: 20px;
     height: 20px;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23f4d3d3"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>');
-    opacity: 0.3;
-    animation: float-up var(--float-time, 10s) linear infinite;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23e74c3c"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>');
+    opacity: 0.8;
+    animation: float-up var(--float-time, 10s) ease-out forwards;
     animation-delay: var(--float-delay, 0s);
     left: var(--float-left, 50%);
+    filter: drop-shadow(0 0 5px rgba(231, 76, 60, 0.5));
+    transform-origin: center;
+    will-change: transform, opacity;
 }
 
 @keyframes float-up {
     0% {
-        transform: translateY(100vh) rotate(0deg) scale(var(--float-scale, 1));
-        opacity: 0.3;
+        transform: translateY(0) rotate(0deg) scale(var(--float-scale, 1));
+        opacity: 0.8;
     }
     100% {
         transform: translateY(-100px) rotate(360deg) scale(var(--float-scale, 1));
@@ -287,9 +314,71 @@ body {
     }
 }
 
+/* Lyrics animation */
+.lyrics-container {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: auto;
+    max-width: 300px;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    pointer-events: none;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.lyric-line {
+    position: relative;
+    width: 100%;
+    text-align: left;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #e74c3c;
+    text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.2),
+        0 0 20px rgba(231, 76, 60, 0.3);
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+    transition: all 2s ease;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 0;
+}
+
+.lyric-line.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.lyric-line.fade-out {
+    opacity: 0;
+    transform: translateY(-50px) scale(0.9);
+    transition: all 2s ease;
+}
+
 /* Rose petals animation */
+.rose-petals {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
 .rose-petal {
-    position: absolute;
+    position: fixed;
     width: 25px;
     height: 25px;
     background: radial-gradient(circle at 70% 30%, #ff9ecd, #e74c3c);
@@ -316,51 +405,4 @@ body {
         transform: translate(var(--fall-x, 100px), calc(100vh + 50px)) rotate(720deg);
         opacity: 0;
     }
-}
-
-/* Lyrics animation */
-.lyrics-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    pointer-events: none;
-    z-index: 1;
-}
-
-.lyric-line {
-    position: absolute;
-    width: 100%;
-    max-width: 800px;
-    text-align: center;
-    font-family: 'Dancing Script', cursive;
-    font-size: 3.5rem;
-    font-weight: bold;
-    color: #e74c3c;
-    text-shadow: 
-        2px 2px 4px rgba(0, 0, 0, 0.2),
-        0 0 20px rgba(231, 76, 60, 0.3);
-    opacity: 0;
-    transform: translateY(50px) scale(0.9);
-    transition: all 2s ease;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    margin: 0 20px;
-}
-
-.lyric-line.visible {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-}
-
-.lyric-line.fade-out {
-    opacity: 0;
-    transform: translateY(-50px) scale(0.9);
-    transition: all 2s ease;
 } 
