@@ -32,7 +32,7 @@ const messages = [
         text: "unnodaaaaa cutennesss ye  ne yenna kolandhaa mari pathukuradhuuu, unnodaaa kalandhatanamm unnodaaa smileee, i feel harder day by dayy😭💗. yenakuu amma aprm yennaa pathukutaaa ore ponu neeee🥺♥️. edhuuu varaiikuuu naa unaa nalla pathukutenn nu namburaaaa , unnodaaa ellaaa expectaions ah fullfill panna na nu therilaaaa anaaa unaaa nalla pathupennn😭💗💗. Unaa eppovumee happyyy ah vechukanuuu unnodaa azhaganaaa smileeee dull ye aga kudadhuuuuu. naaa una yengachuuu hurtt pannirundhaaaa sorrryyyyyyyy . andddd i canttt just write the lettr without saying howwwwww beautiful my darlinggggg iss😚😚-una mari oru azhaga naaaa ponnaaa na pathadheee ellaaaa di devadha mariii irukaaaaa di👉🏻👈🏻😚 chellooooo ,unnoodaaa sirupu irukeeee adhu podhu yenna mayakaaaa, unnodaaaa kangal ah pathuteee irukalaaaammm😭💗",
     },
     {
-        text: "i loveeee youuu soo muchhhhh💗,u are stuck with mee forveerrrrrr heheeee, naa kurumbuu pannuveenn , lusuuu mari pannuvennn,hehee konjiteeee irukpeeeeennn mutham thandhuteeee irupeeennn😚💗, i am careless tooooo neee than yenna unnodaaa baby boi ah pathukanuuuuuuu . yennaa vandhakummm una vituu na poga matenn i promise. i loveeeeeee youuu sooo soo muchhhhh mwahhhhh🧿♥️",
+        text: "i loveeee youuu soo muchhhhh💗,u are stuck with mee forveerrrrrr heheeee, naa kurumbuu pannuveenn , lusuuu mari pannuvennn,hehee konjiteeee irukpeeeeennn mutham thandhuteeee irupeeennn😚💗, i am careless tooooo neee than unnodaaa baby boi ah pathukanuuuuuuu . yennaa vandhalummm una vitutu na poga matenn i promise. i loveeeeeee youuu sooo soo muchhhhh mwahhhhh🧿♥️",
     }
 ];
 
