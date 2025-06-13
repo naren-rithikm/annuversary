@@ -5,10 +5,12 @@
     --shadow-color: rgba(0, 0, 0, 0.1);
 }
 
-* {
+html, body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
 }
 
 body {
@@ -26,6 +28,7 @@ body {
     max-width: 1200px;
     padding: 20px;
     position: relative;
+    overflow: hidden;
 }
 
 .cards-container {
