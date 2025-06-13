@@ -36,23 +36,26 @@ body {
 .card {
     position: absolute;
     width: 320px;
-    min-height: 360px;
+    min-height: 400px;
+    max-height: 500px;
     background: linear-gradient(to bottom, #fff9f9, #fff);
     border-radius: 15px;
-    padding: 18px;
+    padding: 25px;
     cursor: move;
     user-select: none;
     box-shadow: 0 4px 15px var(--shadow-color),
                 0 0 30px rgba(231, 76, 60, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.5s ease;
     font-family: 'Covered By Your Grace', cursive;
-    font-size: 1.4rem;
-    line-height: 1.5;
+    font-size: 1.1rem;
+    line-height: 1.8;
     color: var(--text-color);
     transform-origin: center center;
     border: 1px solid rgba(231, 76, 60, 0.1);
     backdrop-filter: blur(5px);
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .card::before {
@@ -109,11 +112,9 @@ body {
 }
 
 .heart-animation {
-    width: 100px;
-    height: 100px;
-    background: #e74c3c;
+    width: 50px;
+    height: 90px;
     position: relative;
-    transform: rotate(45deg);
     margin: 0 auto 30px;
     animation: heartbeat 1.2s infinite;
 }
@@ -121,28 +122,33 @@ body {
 .heart-animation:before,
 .heart-animation:after {
     content: "";
-    width: 100px;
-    height: 100px;
-    background: #e74c3c;
-    border-radius: 50%;
     position: absolute;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    border-radius: 50px 50px 0 0;
+    background-color: #e74c3c;
 }
 
 .heart-animation:before {
-    left: -50px;
+    left: 50px;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
 }
 
 .heart-animation:after {
-    top: -50px;
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
 }
 
 @keyframes heartbeat {
-    0% { transform: rotate(45deg) scale(0.8); }
-    5% { transform: rotate(45deg) scale(0.9); }
-    10% { transform: rotate(45deg) scale(0.8); }
-    15% { transform: rotate(45deg) scale(1); }
-    50% { transform: rotate(45deg) scale(0.8); }
-    100% { transform: rotate(45deg) scale(0.8); }
+    0% { transform: scale(0.8); }
+    5% { transform: scale(0.9); }
+    10% { transform: scale(0.8); }
+    15% { transform: scale(1); }
+    50% { transform: scale(0.8); }
+    100% { transform: scale(0.8); }
 }
 
 .sparkle {
@@ -169,12 +175,12 @@ body {
 
 /* Adding image support to cards */
 .card-image {
-    width: calc(100% + 36px);
+    width: calc(100% + 50px);
     height: 240px;
     object-fit: contain;
     background-color: #fff9f9;
     border-radius: 12px;
-    margin: -18px -18px 12px -18px;
+    margin: -25px -25px 15px -25px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     border: 2px solid #fff;
     transition: transform 0.3s ease;
@@ -189,11 +195,21 @@ body {
 
 /* Adjust card text spacing */
 .card p {
-    margin-top: 15px;
-    padding: 0 12px;
+    margin: 0;
+    padding: 0;
     position: relative;
     z-index: 1;
-    text-align: center;
+    text-align: left;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-y: auto;
+    flex: 1;
+}
+
+/* Adjust card height for text-only cards */
+.card:not(:has(.card-image)) {
+    min-height: 400px;
+    max-height: 500px;
 }
 
 /* Remove the gradient overlay since we're using contain */
@@ -281,11 +297,13 @@ body {
     opacity: 0.3;
     animation: petal-fall var(--fall-time, 10s) ease-in infinite;
     animation-delay: var(--fall-delay, 0s);
+    top: -50px;
+    will-change: transform;
 }
 
 @keyframes petal-fall {
     0% {
-        transform: translate(0, -50px) rotate(0deg);
+        transform: translate(0, 0) rotate(0deg);
         opacity: 0;
     }
     10% {

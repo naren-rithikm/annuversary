@@ -9,26 +9,31 @@ const messages = [
         image: "images/smile.jpg"  // Your second personal image
     },
     {
-        text: "Every little thing about you makes my heart skip a beat...",
+        text: "To my dear love💌,\n\nhappieeeee firsttt anniversaryyy darlinggggg💟😚🫂\n\nJuly 8th 4:53 -💗💗🧿\nNov 1 - 1st babe\nNov 20- first kiss\nDec 2 - first thangoo\nDec 19 first Date\nDec 26-the moment u layed on my shoulder 💗\nFeb 15- first proper date 🌹\nMarch 6- first time konjunaa neram😭💗",
     },
     {
         text: "The way you understand me without words...",
         image: "images/together.jpg"  // Your third personal image
     },
     {
+        text: "July 8th 4:53 romba special ana oru date and unexpected ana oru date😭💗.\n\nNaaa unmaya sollanu na endha mari la nadakum u suthama expect panlaaa. oru silly ah lusu mari irundha paiyan naaa anaaa konjo konjaam ah totall ah mathitaa yenaaa💟😭. 1 yrr time ponadhee therilaaaa and here we areee celebratinggg ourr 1st anniversarryy and see thingsss working outttt🎀🧿💝. yenaku soulmates melaa aavlo nambikalam ella until i found u🫂🎀. chinnaaa vayasuu la irundhuuu onna irukomm apprm bestfriends epo bf and gf soonnnnnn(hubby wifeyy)🧿😭💟.I am sooooo lunckyyyy and blesseddd to get u as my gf💗💗.",
+    },
+    {
         text: "Our first date feels like yesterday, yet here we are, one beautiful year later...",
         image: "images/first-date.jpg"  // Your fourth personal image
     },
     {
-        text: "The sound of your laughter is my favorite melody...",
+        text: "unkudaaaaa irukuraaa oru oruuu nimishamum rombaaa speciall ,na yennaye marandhu vera oru chinna paiyan ah irukenn😭💗.  inno kudaa edhulaaa oru kanavu marii than irukuuuu😭😭♥️♥️. love laaaa suthamaa poga vendam nu irundhaa oru paiyan na 10th apoo until i saw myself lost in ur cuteness ur smile ur babyness. School ke poga pudikadhaaa naaa hehe una pakka daily um school ku var start panna, kutty kutty peeps, neee coridor ku varum podhuuu , prayer la nikum podhuuu unaaa pakura andha few secondsss laaa than yen whole day precious moment irukuuuu. gorund la ellarum nikum podhuuu appdiyeee unaa pakka try pannum podhuu nee therira andha sec irukeeeee♥️♥️♥️♥️.",
     },
     {
-        text: "You make every day an adventure worth living...",
-        image: "https://source.unsplash.com/400x300/?adventure,travel"
+        text: "yenakuuu unaaa rombbaaa pudikummm di un kudaaa serndhu yen valka muluka valaaanuuuu ( not mee tearing upp nowwww writingggg the letterrrr😭🥺) i am sooo damn in loveee with youuuu💗 . i want to havee kidss with uu😭💗 , do this life with youuuu onlyyy youuu yennalaa ne elladha valkai ah nenachu kuda paka mudiyalaaa.  Naraiyaaa travell pannanuuuu unkudaaaa. appdiyeeeee yedhuvum pesamaaaaa nee thoongum podhuuu yenn thangathaaa pathuuu rasikanuuuu , unnodaaaaa saree ah kata help pannanuuuu ,unakuuu uti vidanuuu , yennodaaaa kolandhaa mari pathukanuuuuu. solliteee polaaam heheee💝.Innoooo kudaaa when i see u my heart beat risessss and there are butterflies🦋 in my stomachhh.  i reallyyy hate this distance between ussss, pakathulayee than irukom ana oru marii distant ah ve irukuraa mariye irukuu😭😭, missing u is the hardest thing i have to go thru dailyy. u were the only person to stay by my sidee during my bad times and good times , kept supporting mee and believeing in me no matter whatt andd unnakuu edhu evlooo theriyu nu yenaku therila anaaa neee yenaku kudutha support and yen side la irundha nala than na epo eppdi endha naren ah iruken🥹🎀",
     },
     {
-        text: "In your eyes, I see my future...",
+        text: "unnodaaaaa cutennesss ye  ne yenna kolandhaa mari pathukuradhuuu, unnodaaa kalandhatanamm unnodaaa smileee, i feel harder day by dayy😭💗. yenakuu amma aprm yennaa pathukutaaa ore ponu neeee🥺♥️. edhuuu varaiikuuu naa unaa nalla pathukutenn nu namburaaaa , unnodaaa ellaaa expectaions ah fullfill panna na nu therilaaaa anaaa unaaa nalla pathupennn😭💗💗. Unaa eppovumee happyyy ah vechukanuuu unnodaa azhaganaaa smileeee dull ye aga kudadhuuuuu. naaa una yengachuuu hurtt pannirundhaaaa sorrryyyyyyyy . andddd i canttt just write the lettr without saying howwwwww beautiful my darlinggggg iss😚😚-una mari oru azhaga naaaa ponnaaa na pathadheee ellaaaa di devadha mariii irukaaaaa di👉🏻👈🏻😚 chellooooo ,unnoodaaa sirupu irukeeee adhu podhu yenna mayakaaaa, unnodaaaa kangal ah pathuteee irukalaaaammm😭💗",
     },
+    {
+        text: "i loveeee youuu soo muchhhhh💗,u are stuck with mee forveerrrrrr heheeee, naa kurumbuu pannuveenn , lusuuu mari pannuvennn,hehee konjiteeee irukpeeeeennn mutham thandhuteeee irupeeennn😚💗, i am careless tooooo neee than yenna unnodaaa baby boi ah pathukanuuuuuuu . yennaa vandhakummm una vituu na poga matenn i promise. i loveeeeeee youuu sooo soo muchhhhh mwahhhhh🧿♥️",
+    }
 ];
 
 // Card positions and rotations
@@ -206,26 +211,34 @@ function stopDragging() {
     );
     
     if (distance > 200) {
+        // Ensure the card fades away properly
         draggedCard.style.opacity = '0';
         draggedCard.style.transform = 'scale(0.8) rotate(10deg)';
         draggedCard.style.transition = 'all 0.5s ease';
-        setTimeout(() => draggedCard.remove(), 500);
-        revealedCards++;
         
-        // Create burst of sparkles for card removal
-        for (let i = 0; i < 15; i++) {
-            setTimeout(() => {
-                createSparkle(
-                    currentX + Math.random() * 150 - 75,
-                    currentY + Math.random() * 150 - 75
-                );
-            }, i * 50);
-        }
-        
-        if (revealedCards === messages.length) {
-            showFinalMessage();
-        }
+        // Remove the card after animation completes
+        setTimeout(() => {
+            if (draggedCard && draggedCard.parentNode) {
+                draggedCard.remove();
+            }
+            revealedCards++;
+            
+            // Create burst of sparkles for card removal
+            for (let i = 0; i < 15; i++) {
+                setTimeout(() => {
+                    createSparkle(
+                        currentX + Math.random() * 150 - 75,
+                        currentY + Math.random() * 150 - 75
+                    );
+                }, i * 50);
+            }
+            
+            if (revealedCards === messages.length) {
+                showFinalMessage();
+            }
+        }, 500);
     } else {
+        // Reset card position if not dragged far enough
         draggedCard.style.left = draggedCard.style.left;
         draggedCard.style.top = draggedCard.style.top;
     }
