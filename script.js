@@ -32,7 +32,7 @@ const messages = [
         text: "Innoooo kudaaa when i see u my heart beat risessss and there are butterflies🦋 in my stomachhh.  i reallyyy hate this distance between ussss, pakathulayee than irukom ana oru marii distant ah ve irukuraa mariye irukuu😭😭, missing u is the hardest thing i have to go thru dailyy. u were the only person to stay by my sidee during my bad times and good times , kept supporting mee and believeing in me no matter whatt andd unnakuu edhu evlooo theriyu nu yenaku therila anaaa neee yenaku kudutha support and yen side la irundha nala than na epo eppdi endha naren ah iruken🥹🎀",
     },
     {
-        text: "unnodaaaaa cutennesss ye  ne yenna kolandhaa mari pathukuradhuuu, unnodaaa kalandhatanamm unnodaaa smileee, i feel harder day by dayy😭💗. yenakuu amma aprm yennaa pathukutaaa ore ponu neeee🥺♥️. edhuuu varaiikuuu naa unaa nalla pathukutenn nu namburaaaa , unnodaaa ellaaa expectaions ah fullfill panna na nu therilaaaa anaaa unaaa nalla pathupennn😭💗💗.",
+        text: "unnodaaaaa cutennesss ye  ne yenna kolandhaa mari pathukuradhuuu, unnodaaa kolandhatanamm unnodaaa smileee, i fell harder day by dayy😭💗. yenakuu amma aprm yennaa pathukutaaa ore ponu neeee🥺♥️. edhuuu varaiikuuu naa unaa nalla pathukutenn nu namburaaaa , unnodaaa ellaaa expectaions ah fullfill panna na nu therilaaaa anaaa unaaa nalla pathupennn😭💗💗.",
     },
     {
         text: "Unaa eppovumee happyyy ah vechukanuuu unnodaa azhaganaaa smileeee dull ye aga kudadhuuuuu. naaa una yengachuuu hurtt pannirundhaaaa sorrryyyyyyyy . Andddd i canttt just write the lettr without saying howwwwww beautiful my darlinggggg iss😚😚-una mari oru azhaga naaaa ponnaaa na pathadheee ellaaaa di devadha mariii irukaaaaa di👉🏻👈🏻😚 chellooooo ,unnoodaaa sirupu irukeeee adhu podhu yenna mayakaaaa, unnodaaaa kangal ah pathuteee irukalaaaammm😭💗",
@@ -367,8 +367,8 @@ function createLyricsAnimation() {
     // Start the animation with initial delay
     setTimeout(() => {
         showNextLine();
-        // Show next line every 4 seconds (3 seconds display + 1 second transition)
-        setInterval(showNextLine, 4000);  // Reduced from 8000 to 4000 for faster cycling
+        // Show next line every 5 seconds (4 seconds display + 1 second transition)
+        setInterval(showNextLine, 5000);  // Changed from 4000 to 5000 for longer display
     }, 500);  // Reduced from 1000 to 500 for faster start
 }
 
